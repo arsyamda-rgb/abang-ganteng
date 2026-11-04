@@ -1,5 +1,5 @@
 
-name: Build VeyrionRace
+name: Build Plugin
 
 on:
   workflow_dispatch:
@@ -19,15 +19,13 @@ jobs:
         with:
           distribution: temurin
           java-version: '21'
-          cache: maven
-          cache-dependency-path: VeyrionRace/pom.xml
 
       - name: Build plugin
-        working-directory: ./VeyrionRace
         run: mvn -B clean package
 
       - name: Upload JAR
         uses: actions/upload-artifact@v4
         with:
-          name: VeyrionRace
-          path: VeyrionRace/target/*.jar
+          name: Plugin-JAR
+          path: target/*.jar
+          if-no-files-found: error
