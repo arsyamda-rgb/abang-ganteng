@@ -1,0 +1,49 @@
+# ============================================
+#   Veyrion Roleplay - konfigurasi
+# ============================================
+
+discord:
+  url: "https://discord.gg/HQ3cM2psVX"
+
+# Font fantasy (butuh resource pack, lihat README).
+# Kalau resource pack belum terpasang, set enabled: false
+font:
+  enabled: true
+  key: "veyrion:fantasy"
+
+gui:
+  # Isi true kalau TIDAK pakai background ItemsAdder (slot diisi kaca hitam/putih)
+  fill-glass: true
+  # Judul GUI saat ItemsAdder aktif. Kosongkan untuk pakai judul teks biasa.
+  # :offset_-8: menggeser gambar supaya pas menutupi inventory
+  main-title: ":offset_-8::veyrion_main:"
+  gacha-title: ":offset_-8::veyrion_gacha:"
+  # Item ItemsAdder untuk tombol (kosongkan untuk pakai material biasa)
+  logo-item: ""
+  start-item: ""
+  exit-item: ""
+  discord-item: ""
+
+# Bobot gacha. Makin besar makin sering keluar.
+# effects = efek permanen untuk ras tsb (format NAMA:LEVEL, level mulai dari 0). Kosongkan kalau tidak mau.
+races:
+  elf:
+    weight: 25
+    ia-item: "veyrion:race_elf"
+    model-data: 1101
+    effects: ["SPEED:0"]
+  beast:
+    weight: 25
+    ia-item: "veyrion:race_beast"
+    model-data: 1102
+    effects: ["NIGHT_VISION:0"]
+  human:
+    weight: 30
+    ia-item: "veyrion:race_human"
+    model-data: 1103
+    effects: []
+  dragon:
+    weight: 20
+    ia-item: "veyrion:race_dragon"
+    model-data: 1104
+    effects: ["FIRE_RESISTANCE:0"]

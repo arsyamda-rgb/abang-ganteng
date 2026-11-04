@@ -1,0 +1,20 @@
+name: VeyrionRoleplay
+version: 1.0.0
+main: net.veyrion.roleplay.VeyrionPlugin
+api-version: '1.21'
+authors: [Veyrion]
+description: Intro UI dan gacha ras untuk Veyrion Roleplay
+softdepend: [ItemsAdder]
+
+commands:
+  veyrion:
+    description: Menu admin Veyrion Roleplay
+    usage: /veyrion <reload|reset|menu|info>
+
+permissions:
+  veyrion.admin:
+    description: Akses semua command admin Veyrion
+    default: op
+  veyrion.bypass:
+    description: Lewati intro dan gacha ras
+    default: false
